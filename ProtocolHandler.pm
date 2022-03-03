@@ -3,7 +3,7 @@ package Plugins::MixCloud::ProtocolHandler;
 # Plugin to stream audio from MixCloud streams
 #
 # Released under GNU General Public License version 2 (GPLv2)
-# Written by Christian Müller
+# Written by Christian MÃ¼ller
 # 
 # See file LICENSE for full license details
 
@@ -169,7 +169,7 @@ sub _fetchTrackExtra {
 	$log->info("Fetching complement with downloader $url $mixcloud_url");
 	
 	$http->send_request( {
-		request => HTTP::Request->new( POST => 'https://www.dlmixcloud.com/ajax.php', 
+		request => HTTP::Request->new( POST => 'https://mixclouddownloader.net', 
 		                               [ 'User-Agent' => USER_AGENT, 'Content-Type' => 'application/x-www-form-urlencoded' ], 
 									   "url=$mixcloud_url" ),
 		Timeout => 30, 								
